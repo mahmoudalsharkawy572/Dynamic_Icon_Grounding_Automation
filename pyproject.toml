@@ -1,0 +1,26 @@
+[project]
+name = "screenseeker-grounding"
+version = "1.0.0"
+description = "ScreenSeekeR-style recursive visual grounding system: Planner -> Candidate Regions -> Recursive Search -> Grounding -> Verification -> Coordinate Projection -> Click"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai>=1.0.0",
+    "mss>=9.0.1",
+    "opencv-python>=4.9.0",
+    "numpy>=1.26.0",
+    "pyautogui>=0.9.54",
+    "pyperclip>=1.8.2",
+    "requests>=2.31.0",
+    "python-dotenv>=1.2.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
